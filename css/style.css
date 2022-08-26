@@ -518,7 +518,22 @@ textarea {
 	
 /* Tela menor que 999px*/
 @media screen and (max-width: 999px){
-	
+
+
+	.container{
+		margin-top: 400px;
+	}
+
+
+	div.float > div button{
+		text-align: end;
+	}
+	.imglogo{
+		width: 20%;
+	}
+
+
+
 	.form{
 		display: flex;
 		flex-direction: column;
@@ -528,6 +543,10 @@ textarea {
 	.formulario{
 		width: 50%;
 		text-align: center;
+	}
+
+	.inputBox{
+		margin-bottom: 20%;
 	}
 	
 	textarea {
