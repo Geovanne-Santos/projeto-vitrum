@@ -423,10 +423,14 @@ figure > img{
 
 
 
-
+.form{
+	/*background: #d677e9;*/
+	background-color: rgba(115, 164, 219, 0.3);
+	padding: 15px;
+}
 
 .formulario{
-	background: rgba(9, 62, 133);
+	background: #093e85;
 	padding: 15px;
 	border-radius: 1.5%;
 }
