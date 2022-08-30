@@ -594,8 +594,7 @@ textarea {
 
 	.imglogo{
 		position: absolute;
-		top: 10%;
-		left: 10%;
+		
 		width: 5%;
 		height: auto;
 	}	
@@ -649,7 +648,6 @@ textarea {
 
 	.imglogo{
 		position: absolute;
-		top: 15%;
-		left: 10%;
+		background: #8197cf;
 	}
 }

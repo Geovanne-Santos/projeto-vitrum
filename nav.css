@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    background-color: #0C0311;
+    height: 80px;
+}
+
+.menu ul{
+    display: flex;
+    margin-right: 5%;
+}
+
+.menu ul li{
+    line-height: 80px;
+    margin: 0 5px;
+}
+
+.menu ul li a{
+    color: white;
+    font-size: 17px;
+    padding: 4px 7px;
+
+}
+
+img.imglogo{
+    width: 75px;
+    height: auto;
+    margin-left: 5%;
+    line-height: 80px;
+}
