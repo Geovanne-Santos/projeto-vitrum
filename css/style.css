@@ -136,14 +136,6 @@ footer p{
 	color: #fff;
 }
 
-.fixo{
-	position: fixed;
-	top: 0;
-	right: 0;
-	left: 0;
-	z-index: 1030;
-}
-
 .menu {
     text-align: center;
 }
@@ -167,8 +159,9 @@ header a:link{
 
 .imglogo{
 	pointer-events: none;
-	width: 5%;
+	width: 200px;
 	height: auto;
+	transform: translateX(15px);
 }
 
 
@@ -521,11 +514,11 @@ textarea {
 
 
 	.container{
-		margin-top: 400px;
+		margin-top: 50px;
 	}
 
 
-	div.float > div button{
+	div.float > div button.btn{
 		text-align: end;
 	}
 	.imglogo{
@@ -567,7 +560,7 @@ textarea {
 /*Tela maior que 768px*/
 @media screen and (min-width: 999px){
 	.container{
-		margin-top: 10%;
+		margin-top: 120px;
 	}
 
 	header, footer{
@@ -584,18 +577,25 @@ textarea {
 	.menu{
 		position: absolute;
 		right: 5%;
-		top: 22.5%;
+		top: 25%;
 	}
 
 	.menu ul li{
-		display: inline;
+		display: inline-block;
 		margin-left: 15px;
+	}
+
+	.fixo{
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 1030;
 	}
 
 	.imglogo{
 		position: absolute;
-		
-		width: 5%;
+		width: 100px;
 		height: auto;
 	}	
 
@@ -608,7 +608,7 @@ textarea {
 	}
 
 	.footer-links li{
-		display: inline;
+		display: inline-block;
 		margin-left: 20px;
 		font-size: 1.1em;
 	}
@@ -636,18 +636,4 @@ textarea {
 	}
 	
 	
-}
-/* Tela maior que 999px*/
-@media screen and (min-width: 1299px){
-
-	.menu{
-		position: absolute;
-		right: 10%;
-		top: 25%;
-	}
-
-	.imglogo{
-		position: absolute;
-		background: #8197cf;
-	}
 }
