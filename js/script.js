@@ -6,7 +6,7 @@ var click = 20;
 
 var clickh1 = 30;
 
-var clickh2 = 40;
+var clickh2 = 25;
 
 var clickh3 = 30;
 
@@ -41,6 +41,7 @@ $('#aumenta_font').click(function(){
     $("li"). css("font-size", clickli);
     $(".span1"). css("font-size", clickp);
     $(".span2"). css("font-size", span2);
+    $("figcaption").css("font-size", click);
 
      console.log('oi coisa linda');
 
@@ -70,5 +71,6 @@ $('#diminui_font').click(function(){
   $("button"). css("font-size", clickp);
   $(".span1"). css("font-size", clickp);
   $(".span2"). css("font-size", span2);
+  $("figcaption").css("font-size", click);
 
 })

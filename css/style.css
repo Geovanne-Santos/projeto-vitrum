@@ -57,7 +57,7 @@ h1, h2, h3 {
     text-align: center;
 }
 
-p, label, .dark .modal-content p{
+p, label, .dark .modal-content p, figcaption{
     color: #141414;
     font-size: 20px;
 	font-family: 'Questrial', sans-serif;
