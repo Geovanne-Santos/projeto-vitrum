@@ -7,94 +7,160 @@
     <link rel="stylesheet" href="css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/menu.css">
     <script src="https://kit.fontawesome.com/8ec8caa784.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="img/fav.png" type="image/x-icon">
-    <script type="text/javascript" src="js/script.js"></script>
     <title>V.I.T.R.U.M C.A</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script>
+
+        $(document).ready(function(){
+            $('#dark_mode').click(function(){
+                var element = document.body;
+                element.classList.toggle("dark");
+            });
+        }); 
+
+        $(document).ready(function(){
+            $("#dark_mode").click(function(){
+                var src = $('.img-float').attr('src');
+                var newsrc = (src=='img/control_white.png') ? 'img/control.png' : 'img/control_white.png';
+                $('.img-float').attr('src', newsrc );
+            });
+        });
+
+        function changeIcon() {
+            $('#dark_mode').find("i").toggleClass("fa-moon fa-sun");
+        }
+        
+
+    
+    </script>
 </head>
 <body>
 
     <header class="fixo">
-        <img src="img/new_nav.png" class="imglogo">
         <nav class="menu">
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="menu_objt">
-                <li class="a-active"><a href="index.html">Início</a></li>
+            <img class="img-logo" src="img/new_nav.png" alt="Logo da Vitrum, site de tecnologia e game dev">
+            
+            
+
+            <ul>
+                <li class="link"><a href="#">Início</a></li>
                 <li><a href="pages/about.html">Sobre</a></li>
-                <li><a href="pages/services.html">Serviços</a></li>
-                <li><a href="pages/history.html" target="_blank">Funcionários</a></li>
-                <li><a href="pages/contato.html"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                <li><a href="pages/history.html">História</a></li>
             </ul>
+                
+            <div class="btns">
+                <button id="dark_mode" onclick="changeIcon(this)">
+                    <i class="fa fa-moon"></i>
+                </button>
+
+               <button id="aumenta_font" onclick="aumentaFont(this)">
+                    <i class="fa-solid fa-a"></i> <i class="fa-solid fa-plus"></i>
+                </button>
+
+                <button id="diminui_font" onclick="diminuiFont(this)">
+                    <i class="fa-solid fa-a"></i> <i class="fa-solid fa-minus"></i>
+                </button>
+                    
+
+            </div>
+
+            
         </nav>
     </header>
 
-    <section class="container">
-
+    <section class="main">
         <div>
-            <h2 class="start_h2">V.I.T.R.U.M  C.A</h2>
-        </div>     
+            <h2>V.I.T.R.U.M  C.A</h2>
+        </div>
 
           
         <div>
             <div class="float">
-                <img src="img/vitrum_start_photo_text.png" alt="" class="img-float">
-                <p class="text-justify">V.I.T.R.U.M C.A é uma empresa com sede na Europa, trabalhamos em todo o globo oferecendo os mais diversos serviços médicos e farmacêuticos, promovendo uma ampla gama de recursos para variados tipos de problemas de saúde para mente, corpo e alma.
-                    <span id="pontos"> <br>...</span> <br> <br> <span id="mais">
+                <img src="img/control.png" alt="Ilustração de controle" class="img-float img-init">
+                <p class="text-justify">V.I.T.R.U.M é uma empresa de desenvolvimento de jogos, empenhada em criar boas histórias, querendo ao máximo mostrar o quão a arte pode se manifestar dos mais diversos modos dentro desse tipo de “plataforma”, mostrando o cerne do jeito mais complexo de se criar uma obra nos dias de hoje, um “game”.
+                    <br> <br> <span id="mais">
 
-                        Vitrum também é um participante do conglomerado de empresas Fármako, sendo a segunda maior na categoria de vendas e a melhor em custo-benefício. Trabalhando para melhorar a saúde do interno humano cada vez mais, ajudando os pecadores a encontrar a luz e os iluminados a permanecer na terra por muitos mais ciclos.
+                        Nós também estamos aqui para ajudar com a visibilidade dos jogos nacionais, os apoiando e mostrando seu verdadeiro potencial.
                     </span>
                 </p>
                 <div>
-                    <button onclick="LeiaMais()" id="btnLeiaMais" class="btn btn-info"> Leia Mais</button>
+                    <button id="btn" class="ReadMore">Leia mais</button>
                 </div>
             </div>
         </div>
 
+        <h1> Nossos projetos </h1>
+        
+        <div class="artigo">
+            
+            <div class="article">
+                
+                <div>
+                    <img src="img/capa_jogo.jpeg" alt=" Void Corpse Empyt Soul, o jogo oficial da equipe Vitrum">
+                </div>
+                <div>
+                    <p>❝ Algumas centenas de anos se passaram, e a humanidade, fauna e flora deixaram de existir. A única mente a acordar nesse mundo era a de Jacob, que revive com seu corpo em uma forma fúngica. Sem suas memórias, mas com leves visões com um instinto humano em busca de sobreviver. Ele sai de sua cápsula, e caminha num cenário desolado, atrás de não só de recuperar sua própria história, mas também de consertar seus próprios erros passados. Erros que causaram tudo isso. <br>
+                        Olhos por todo lado, Jacob nunca estará sozinho. ❞
+                    </p>
 
-        <div>
-            <h1>Produtos que temos a oferecer</h1>
-        </div>
+                    <p>
+                    - Void Corpse: Empty Soul
+                    </p>
+                </div>
+            </div>
 
-        <div class="float-left">
-            <img src="img/vitrum_start_photo_text.png" alt="" class="img-float">
-            <div class="text-justify">
-                <p> V.I.T.R.U.M C.A é uma empresa com sede na Europa, trabalhamos em todo o globo oferecendo os mais diversos serviços médicos e farmacêuticos, promovendo uma ampla gama de recursos para variados tipos de problemas de saúde para mente, corpo e alma. 
-                <span id="pontos2"> <br>...</span> <br> <br> <span id="mais2">
-                    Vitrum também é um participante do conglomerado de empresas Fármako, sendo a segunda maior na categoria de vendas e a melhor em custo-beneficio. Trabalhando para melhorar a saude do interno humano cada vez mais, ajudando os pecadores a encontrar a luz e os iluminados a permanecer na terra por muitos mais ciclos. 
-                </span>
-                </p>
 
-                <div class="text-end">
+            <div class="article">
+                <div>
+                    <img src="img/aeroporto.png" alt="">
+                </div>
+                <div>
+                    <p> Desde a solidificação da indústria de jogos, diferentes gêneros de enredo e jogabilidade, gráficos, softwares e linguagens de programação foram utilizados para alcançarmos o resultado o qual conhecemos hoje, rico em diversidades. No Brasil, os primeiros projetos independentes devem ser lembrados com muita cortesia. <br> <br> <a href="pages/history.html">Clique aqui</a> para ter acesso a história dos jogos. </p>
+                </div>
+            </div>
 
-                    <button onclick="VerMais()" id="vejamais" class=" btn btn2 btn-info text-end"> Leia Mais</button>
+
+            <div class="article">
+                <div>
+                    <img src="img/help.jpg" alt="">
+                </div>
+                <div>
+                    <p> Para auxiliarmos os desenvolvedores iniciantes, montamos uma simples entrevista com o Eduardo Perez (programador oficial de Void Corpse: Empty Soul). Esperamos limpar grandes dúvidas e ajudar os programadores independentes a criar o seu próprio jogo. <br> <br> <a href="pages/assist.html"> Clique aqui </a> para ter acesso ao conteúdo.</p>
                 </div>
             </div>
         </div>
+    
+        
+
     </section>
 
-    <footer style="margin-top: 10%;">
-        <div>
+
+    <footer>
+        <div class="footer">
             <div>
-                <p>Base da Vitrum localizada no satélite natural</p>
-                <p>Copyright © 2022 Time VITRUM</p>
+                <p>
+                    Vitrum — Grande ABC Paulista
+                </p>
+
+                <p>
+                    Copyright © 2022 Time VITRUM
+                </p>
             </div>
-            <ul class="footer-links">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="pages/about.html">Sobre</a></li>
-                <li><a href="pages/services.html">Serviços</a></li>
-                <li><a href="pages/history.html" target="_blank">Fabulas</a></li>
-                <li><a href="pages/contato.html"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="history.html">História</a></li>
             </ul>
         </div>
-
-    
     </footer>
 
+    <script src="js/script.js"></script>
 
-    <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

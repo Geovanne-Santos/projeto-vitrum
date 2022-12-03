@@ -2,7 +2,7 @@
 
 var modal = document.getElementsByClassName('myModal');
 
-var btn = document.getElementsByClassName('myBtn');
+var btn = document.getElementsByClassName('img-btn');
 
 var span = document.getElementsByClassName('close');
 
@@ -43,48 +43,15 @@ for (i = 0; i < btn.length; i++){
 
 }
 
+
+window.onclick = function(event) {
+  if (event.target == modal[i]) {
+    var elementIndex = this.getAttribute('data-index');
+    modal[elementIndex].style.display = "none";
+  }
+}
+
 // Toda ve\ que for carregado a página, será executada a função setIndex
 window.onload = function() {
     setIndex();
 };
-
-
-
-const control = document.querySelectorAll('.control');
-
-let currentItem = 0;
-
-const items = document.querySelectorAll('.item');
-
-const maxItems = items.length;
-
-control.forEach(control => {
-    control.addEventListener('click', () => {
-        const isLeft = control.classList.contains("arrow-left");
-        
-        if (isLeft) {
-            currentItem -= 1;
-        } else {
-            currentItem += 1;
-        }
-
-        if (currentItem >= maxItems) {
-            currentItem = 0;
-        }
-
-        if (currentItem < 0) {
-            currentItem = maxItems -1;
-        }
-
-        items.forEach(item => item.classList.remove('current-item'));
-    
-        items[currentItem].scrollIntoView({
-            inline: "center",
-            behavior: "smooth"
-        })
-
-
-        items[currentItem].classList.add("current-item");
-    });
-});
-

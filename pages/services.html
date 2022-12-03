@@ -25,8 +25,7 @@
                 <li><a href="../index.html">Início</a></li>
                 <li><a href="about.html">Sobre</a></li>
                 <li class="a-active"><a href="services.html">Serviços</a></li>
-                <li><a href="history.html" target="_blank">Funcionários</a></li>
-                <li><a href="contato.html"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                <li id="open-btn">Funcionários</li>
             </ul>
         </nav>
     </header>
@@ -35,8 +34,6 @@
         <!--<button id="myBtn">Abrir </button> -->
 
         <div class="carousel">
-          <button class="arrow-left control" aria-label="Previous Image">←</button>
-          <button class="arrow-right control" aria-label="Next Image">→</button>
           <div class="galeria-wrapper">
               <div class="galeria">
                 <div>
@@ -157,6 +154,31 @@
         </div>
         
     </section>
+
+    <div class="modalFunc">
+      <div class="modal-content">
+          <span class="close close_multi" id="close">&times;</span>
+          <form class="userFunc">
+              <h1 class="h3">Seja bem-vindo</h1>
+
+              <span class="UserIcon"><i class="fa-solid fa-user"></i></span> <br>
+          
+
+              <div class="input--container">
+                  <input type="text" name="" class="input" placeholder="Email">
+                  <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <div class="input--container">
+                  <input type="text" name="" class="input" placeholder="Senha">
+                  <i class="fa-solid fa-envelope"></i>
+              </div>
+
+              <button class="btn btn-danger">Enviar</button>
+          </form>
+      </div>
+  </div>
+
 
     <!--<footer>
         <div>

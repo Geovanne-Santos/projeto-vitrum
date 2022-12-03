@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/reset.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="https://kit.fontawesome.com/8ec8caa784.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="../img/fav.png" type="image/x-icon">
+    <title>Sobre — VITRUM</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    <script>
+
+
+        // DARK MODE
+        $(document).ready(function(){
+            $('#dark_mode').click(function(){
+                var element = document.body;
+                element.classList.toggle("dark");
+            });
+        });   
+        
+        function changeIcon() {
+            $('#dark_mode').find("i").toggleClass("fa-moon fa-sun");
+        }
+
+
+    </script>
+</head>
+<body>
+
+    <header class="fixo">
+        <nav class="menu">
+            <img class="img-logo" src="../img/new_nav.png" alt="">
+            
+
+            <ul>
+                <li class="link"><a href="../index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="history.html">História</a></li>
+            </ul>
+            
+            <div class="btns">
+                <button id="dark_mode" onclick="changeIcon(this)">
+                    <i class="fa fa-moon"></i>
+                </button>
+                <button id="aumenta_font" onclick="aumentaFont(this)">
+                    <i class="fa-solid fa-a"></i> <i class="fa-solid fa-plus"></i>
+                </button>
+                <button id="diminui_font" onclick="diminuiFont(this)">
+                    <i class="fa-solid fa-a"></i> <i class="fa-solid fa-minus"></i>
+                </button>
+                    
+
+                </div>
+
+        </nav>
+    </header>
+
+    <section class="main">
+
+        <div class="ajuda-container">
+            <div class="interview">
+
+                <div>
+                    <h2> Quais são os jogos favoritos do Eduardo? </h2>
+                    <p>
+                        ❝ God of war, Bioshock, Undertale, Hollow Knight e Street Fighter. ❞
+                    </p>
+                </div>
+    
+                <div>
+                    <h2>É fácil achar conteúdos que ajudam na criação dos códigos?</h2>
+    
+                    <p>❝ Princípios básicos como a colisão de um objeto sim, mas à medida que existe a
+                        procura de algo mais específico, achar esses conteúdos acabam se tornando muito
+                        difícil, principalmente em português. ❞</p>
+                </div>
+    
+                <div>
+                    <h2>Qual foi a sua experiência usando o Gamemaker?</h2>
+                    <p>❝ Foi complicado a princípio, mas depois de um tempo programando nele, se tornou
+                        uma ferramenta bem prática. ❞</p>
+                </div>
+    
+                <div>
+                    <h2> Quanto tempo você passou programando o jogo? </h2>
+                    <p> ❝ Cerca de um ano e dois meses ❞ </p>
+                </div>
+    
+                <div>
+                    <h2> Você pretende seguir nessa área? </h2>
+                    <p> ❝ Sim, pois gostei da experiência de criar um jogo e mais ainda das pessoas jogando,
+                        quero continuar me aprimorando nisso descobrindo novas coisas. ❞ </p>
+                </div>
+    
+                <div>
+                    <h2> Como você descreveria sua experiência como programador até então? </h2>
+                    <p> ❝ Minha experiência começou um pouco antes da escola, onde aprendi lógica de
+                        programação a partir de cursos online. Depois foi aprimorado na escola com o curso
+                        técnico de informática, destaco aqui período que se passou durante a pandemia,
+                        trabalhei em um projeto individual usando o Unity (que infelizmente foi corrompido)
+                        e um curso completo de programação orientada a objeto em java. Após isso, agora
+                        no último ano, tive um grande desenvolvimento em programação orientada a
+                        objetos e principalmente na criação de jogos. ❞ </p>
+                </div>
+    
+                <div>
+                    <h2> O que você diria para as pessoas que estão começando agora na área de
+                        desenvolvimento? </h2>
+                    <p> ❝ Para ter paciência e não se frustrar por tentar resolver todos os bugs e problemas
+                        no desenvolvimento de uma vez só, sempre procurar por novas soluções aos
+                        problemas e não se limitar a ficar sempre fazendo o mesmo código pra tudo. ❞ </p>
+                </div>
+
+            </div>    
+
+            <div>
+                         
+                <figure>
+                    <img src="../img/helpme.jpeg" alt=""> <br>
+                    <figcaption> Eduardo Perez, programador, GameDev do jogo do projeto Vitrum </figcaption>
+                </figure>
+            </div>
+
+        </div>
+        
+        
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div>
+                <p>
+                    Vitrum — Grande ABC Paulista
+                </p>
+
+                <p>
+                    Copyright © 2022 Time VITRUM
+                </p>
+            </div>
+
+            <ul>
+                <li><a href="../index.html">Início</a></li>
+                <li><a href="about.html">Sobre</a></li>
+                <li><a href="history.html">História</a></li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+</html>

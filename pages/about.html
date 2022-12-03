@@ -1,3 +1,22 @@
+<!--<?php
+
+if(isset($_POST['submit']))
+{
+    //print_r($_POST['nome']);
+    //print_r($_POST['tel']);
+    //print_r($_POST['email']);
+
+    include_once('../conexao.php');
+
+    $nome = $_POST['nome'];
+    $tel = $_POST['tel']; 
+    $email = $_POST['email'];
+}
+
+?>
+-->
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -6,122 +25,298 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+   
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <script src="https://kit.fontawesome.com/8ec8caa784.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" href="../img/fav.png" type="image/x-icon">
     <title>Sobre — VITRUM</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+    <script>
+
+
+        $(document).ready(function(){
+            $(".toggleBtn").click(function(){
+                $(".form").fadeToggle(350);
+                $(".form").css("display", "flex");
+            });
+        });
+
+
+
+        // DARK MODE
+        $(document).ready(function(){
+            $('#dark_mode').click(function(){
+                var element = document.body;
+                element.classList.toggle("dark");
+            });
+        });   
+        
+        function changeIcon() {
+            $('#dark_mode').find("i").toggleClass("fa-moon fa-sun");
+        }
+
+        // NÚMERO DE TELEFONE
+        $(document).ready(function (){
+            $("#tel").mask("(00) 00000-0000");
+        });
+
+
+        
+        
+
+
+    </script>
 </head>
 <body>
+
     <header class="fixo">
-        <img src="../img/new_nav.png" class="imglogo">
         <nav class="menu">
-            <div class="mobile-menu">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-            <ul class="menu_objt">
+            <img class="img-logo" src="../img/new_nav.png" alt="">
+            
+
+            <ul>
                 <li><a href="../index.html">Início</a></li>
-                <li class="a-active"><a href="about.html">Sobre</a></li>
-                <li><a href="services.html">Serviços</a></li>
-                <li><a href="history.html" target="_blank">Funcionários</a></li>
-                <li><a href="contato.html"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                <li class="link"><a href="about.html">Sobre</a></li>
+                <li><a href="history.html">História</a></li>
             </ul>
+            
+            <div class="btns">
+                <button id="dark_mode" onclick="changeIcon(this)">
+                    <i class="fa fa-moon"></i>
+                </button>
+                <button id="aumenta_font" onclick="aumentaFont(this)">
+                    <i class="fa-solid fa-a"></i> <i class="fa-solid fa-plus"></i>
+                </button>
+                <button id="diminui_font" onclick="diminuiFont(this)">
+                    <i class="fa-solid fa-a"></i> <i class="fa-solid fa-minus"></i>
+                </button>
+                    
+
+                </div>
+
         </nav>
     </header>
 
-
-    <section class="container">
+    <section class="main">
         <div>
-
             <figure>
-                <img src="../img/vitrum-2.png" class="img-fluid,">
-                <h2>A VITRUM é uma empresa farmacêutica de desenvolvimento da saúde e extensão da vida.</h2>
-                <h2>Nossa missão é criar uma longa e boa vida para todos</h2>
+                <img src="../img/vitrum.png" class="img-fluid,">
+                <p>A VITRUM é uma equipe que incentiva os Devs iniciantes a começar na área de produção de jogos.</p>
+                <p>Nossa missão é espalhar a fama de jogos brasileiros no mundo.</p>
             </figure>
         </div>
 
+        <div class="form-content">
 
-        <div class="form">
-            <div class="contact-text">
-                <h1 class="text-start">Entre em contato conosco</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat, fuga.</p>
-            </div>
-            <div class="formulario">
-                <form>
-                        <br>
 
-                        <div class="inputBox">
-                            <input type="text" class="inputUser">
-                            <label class="labelInput">Nome: </label>
-                        </div>
-                        
-                        <div class="inputBox">
-                            <input type="tel" class="inputUser">
-                            <label class="labelInput">Número de telefone: </label> <br>
-                        </div>
-                        
-                        <div class="inputBox">
-                            <input type="email" class="inputUser">
-                            <label class="labelInput">Endereço de E-mail: </label><br>
-                        </div>
-                        
-                        <div class="inputBox">
-                            <textarea name="message" placeholder="Escreva aqui a sua dúvida ou um comentário para nos ajudar a melhorar"></textarea>
-                        </div>
+            
+            <button class="toggleBtn">
+            <span>
+                <i class="fa-solid fa-file-lines"></i>
+                ACESSE O FORMULARIO
+            </span>
+            </button>
+            
+            
+            <div class="form">
+                <div class="contact-text">
+                    <h1 class="text-start">Entre em contato conosco</h1>
+                    <p>Visite nossas redes abaixo.</p>
+                    <ul>
+                        <li><a href=""><i class="fa-solid fa-phone"></i></a> 11 98445-6667</li>
+                        <li><a href="mailto:vitrum.company.ofc@gmail.com"><i class="fa-regular fa-envelope"></i></a> vitrum.company.ofc@email.com</li>
+                        <li><a href="https://www.instagram.com/vitrum__ofc/" target="_blank"><i class="fa-brands fa-instagram"></i></a> @vitrum__ofc</li>
+                    </ul>
+                </div>
+                <div class="formulario">
+                    <form action="about.php" method="POST">
+                            <br>
     
-                        <div>
-                            <button type="button" class="btn btn-outline">Enviar</button>
-                        </div>
-                        
-                </form>
+                            <div class="inputBox">
+                                <input type="text" class="inputUser" name="nome" required>
+                                <label for="nome" class="labelInput">Nome: </label>
+                            </div>
+                            
+                            <div class="inputBox">
+                                <input type="text" id="tel" class="inputUser" name="tel" required>
+                                <label for="tel" class="labelInput">Número de telefone: </label> <br>
+                            </div>
+                            
+                            <div class="inputBox">
+                                <input type="text" class="inputUser" name="email" required>
+                                <label for="email" class="labelInput">Endereço de E-mail: </label><br>
+                            </div>
+                            
+                            <div class="inputBox">
+                                <textarea name="message" placeholder="Escreva aqui a sua dúvida ou um comentário para nos ajudar a melhorar"></textarea>
+                            </div>
+        
+                            <div>
+                                <button type="submit" class="btn btn-outline">Enviar</button>
+                            </div>
+                            
+                    </form>
+                </div>
             </div>
         </div>
 
         <div>
-            <h1 class="fs-2">Os Operadores</h1>
+            <h1>Os Operadores</h1>
         </div>
-        <div class="row row-cols-5">
+        <div class="row row-cols-7">
             <div class="col">
-                <img src="../img/jojo.jpg">
-                <h2>Geovanne Meloni</h2>
-            </div>
-
-            <div class="col">
-                <img src="../img/JesusCristo1.jpg  ">
+                <div>
+                    <img src="../img/sobre_fotos/Jesus.png" class="img-btn">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
                 <h2>Eduardo Perez</h2>
             </div>
 
+            
+            
             <div class="col">
-                <img src="../img/exemplo_about.jpg">
+                <div>
+                    <img src="../img/sobre_fotos/erik.png" class="img-btn">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
                 <h2>Erik Marlon</h2>
             </div>
-
+            
             <div class="col">
-                <img src="../img/jenny.jpg">
-                <h2>Jennifer Pereira</h2>
-            </div>
-
-            <div class="col">
-                <img src="../img/gato maconha.jpg">
+                <div>
+                    <img src="../img/sobre_fotos/Ester.png" class="img-btn">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
                 <h2>Ester Sousa</h2>
             </div>
-          </div>
+
+            <div class="col">
+                <div>
+                    <img src="../img/sobre_fotos/lobinha.png" class="img-btn">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
+                <h2>Jennifer Pereira</h2>
+            </div>
+            
+
+            <div class="col">
+                <div>
+                    <img src="../img/sobre_fotos/jojo.png" class="img-btn">
+                    <span>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+                </div>
+                <h2>Geovanne Meloni</h2>
+            </div>
+        </div>
 
     </section>
 
+    <div  class="modal myModal">
+        <div class="modal-content">
+          <span class="close close_multi">&times;</span>
+          <div class="float-left">
+              <h1 class="h3">Eduardo Matheus Espiridião Perez de Freitas</h1>
+              <img src="../img/sobre_fotos/Jesus.png" alt="" id="modal-img">
+              <p>Meu nome é Eduardo de Freitas, eu tenho 17 anos e sou o desenvolvedor responsável pela programação do jogo nesse projeto, usando a plataforma Game Maker Studio 2. A experiência de desenvolver um jogo foi muito interessante, foi um projeto no qual eu busquei conhecimento e aprendi coisas novas. E depois de ter tido essa experiência é com certeza uma área na qual eu quero seguir e continuar aprendendo.
+            </p>
+          </div>
+          
+        </div>
+      </div>   
+
+      <!-- The Modal -->
+      <div class="modal myModal">
+      
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close close_multi">&times;</span>
+          <div class="float-left">
+              <h1 class="h3">Erik Marlon Souza Leite</h1>
+              <img src="../img/sobre_fotos/erik.png" alt="" id="modal-img">
+              <p>Meu nome é Erik, tenho 17 anos e sou o designer gráfico do projeto e tudo o que está envolta dele. Tudo o que você enxerga dentro do jogo fui eu que desenhei, trabalhoso? Muito, valeu a pena? Até agora sim. <br>
+              O lado bom é que, com o projeto, eu consegui me aperfeiçoar um pouco, e melhorar minhas habilidades artísticas, no geral foi divertido, porém, as vezes eu queria que o projeto fosse uma tela com 2 quadrados de cores diferentes.</p>
+          </div>     
+        </div>
+      </div>
+
+      <div class="modal myModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close close_multi">&times;</span>
+          <div class="float-left">
+              <h1 class="h3">Ester Sousa Barbosa</h1>
+              <img src="../img/sobre_fotos/Ester.png" alt="" id="modal-img">
+              <p>Meu nome é Ester Sousa, eu tenho 17 anos e fui responsável por realizar as pesquisas, organização e cheguei até dar uma ajudinha na parte visual do projeto. Realizar esse projeto desenvolveu bastante meus conhecimentos sobre a área e dar ainda mais valor a produtores de jogos no Brasil</p>
+          </div>  
+        </div>
+      </div>
+
+      <div class="modal myModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close close_multi">&times;</span>
+          <div class="float-left">
+              <h1 class="h3">Jennifer Pereira Maria</h1>
+              <img src="../img/sobre_fotos/lobinha.png" alt="" id="modal-img">
+              <p>Eu me chamo Jennifer, tenho 17 anos e sou a sound designer desse projeto. Tudo que você conseguir ouvir nesse jogo, fui eu que criei!
+              Confesso que não foi nada fácil no começo, criar sons de sombras e conceitos sombrios, me deu mais trabalho que o esperado. <br>
+              Mas com o tempo fui me aperfeiçoando, melhorando os efeitos sonoros, as músicas...
+              Criei um apego por cada parte desse jogo, e me apaixonei pela área auditiva do mercado independente.
+              </p>
+          </div>  
+        </div>
+      </div>
+
+      <div class="modal myModal">
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close close_multi">&times;</span>
+          <div class="float-left">
+              <h1 class="h3">Geovanne Meloni dos Santos</h1>
+              <img src ="../img/sobre_fotos/jojo.png" alt="" id="modal-img">
+              <p>Meu nome é Geovanne Meloni, tenho 17 e sou o programador responsável pela criação e desenvolvimento do Website do projeto. <br>
+              Foi deveras trabalhoso eu diria, porém, o que mais atrapalhou o desenvolvimento do site foram as várias mudanças desejadas pelos meus companheiros de equipe. Mas, deixando isso de lado, foi muito gratificante trabalhar na parte visual do site da Vitrum, e com certeza foi um projeto que me ajudou a evoluir na área.</p>
+          </div>  
+        </div>
+      </div>
+
+      
+          <script src="../js/script.js"></script>
+      
+          <script src="../js/modal.js"></script>
+
+
     <footer>
-        <div>
+        <div class="footer">
             <div>
-                <p>A vitrum é uma empresa foda</p>
-                <p>Copyright © 2022 Time VITRUM</p>
+                <p>
+                    Vitrum — Grande ABC Paulista
+                </p>
+
+                <p>
+                    Copyright © 2022 Time VITRUM
+                </p>
             </div>
-            <ul class="footer-links">
+
+            <ul>
                 <li><a href="../index.html">Início</a></li>
                 <li><a href="about.html">Sobre</a></li>
-                <li><a href="services.html">Serviços</a></li>
-                <li><a href="history.html" target="_blank">Fabulas</a></li>
-                <li><a href="contato.html"><i class="fa-solid fa-envelopes-bulk"></i></a></li>
+                <li><a href="history.html">História</a></li>
             </ul>
         </div>
     </footer>
