@@ -13,7 +13,7 @@ html{
 }
 
 section > div {
-	margin: 5% 5%;
+	margin: 3% 3%;
 }
 
 /* MODO NOTURNO */
@@ -88,7 +88,7 @@ h3{
 	font-weight: 600;
 }
 
-.col {
+.col,figure img{
 	text-align: center;
 }
 
@@ -291,6 +291,7 @@ footer p{
 	width: 300px;
 	height: 300px;
 	border-radius: 3px;
+	margin-top: 20px;
 }
 
 
@@ -720,6 +721,11 @@ textarea{
 		max-width: 500px;
 	}
 
+	.ajuda-container figure img{
+		width: 70%;
+		height: auto;
+	}
+
 
 
 }
@@ -764,4 +770,12 @@ textarea{
 	.artigo .article:nth-child(2){
 		flex-direction: row-reverse;
 	}
+
+	.ajuda-container figure img{
+		width: 300px;
+		height: auto;
+	}
+
+	
+
 }

@@ -19,6 +19,8 @@
         $(document).ready(function(){
             $('#btn').click(function(){
                 $('#mais').fadeToggle(350);
+                $(this).text($(this).text() == 'Leia menos' ? 'Leia mais' : 'Leia menos');
+
             });
         });
 
@@ -56,8 +58,7 @@
 
             <ul>
                 <li class="link"><a href="#">Início</a></li>
-                <li><a href="pages/about.html">Sobre</a></li>
-                <li><a href="pages/history.html">História</a></li>
+                <li><a href="pages/about.html">Sobre nós</a></li>
             </ul>
                 
             <div class="btns">
@@ -123,7 +124,7 @@
 
             <div class="article">
                 <div>
-                    <img src="img/help.jpg" alt="">
+                    <img src="img/help.jpg" alt=" Equipe de desenvolvimento de jogos">
                 </div>
                 <div>
                     <p> Para auxiliarmos os desenvolvedores iniciantes, montamos uma simples entrevista com o Eduardo Perez (programador oficial de Void Corpse: Empty Soul). Esperamos limpar grandes dúvidas e ajudar os programadores independentes a criar o seu próprio jogo. <br> <br> <a href="pages/assist.html"> Clique aqui </a> para ter acesso ao conteúdo.</p>
@@ -132,7 +133,7 @@
 
             <div class="article">
                 <div>
-                    <img src="img/aeroporto.png" alt="">
+                    <img src="img/jogo_ilustracao.jpeg" alt="">
                 </div>
                 <div>
                     <p> Desde a solidificação da indústria de jogos, diferentes gêneros de enredo e jogabilidade, gráficos, softwares e linguagens de programação foram utilizados para alcançarmos o resultado o qual conhecemos hoje, rico em diversidades. No Brasil, os primeiros projetos independentes devem ser lembrados com muita cortesia. <br> <br> <a href="pages/history.html">Clique aqui</a> para ter acesso a história dos jogos. </p>
