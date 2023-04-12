@@ -248,6 +248,7 @@ footer p{
 	width: 550px;
 	height: auto;
 	border-radius: 3px;
+	pointer-events: none;
 }
 
 
